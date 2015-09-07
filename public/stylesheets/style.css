@@ -1,8 +1,24 @@
 body {
   padding: 50px;
+  margin-left: 20%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.columns {
+  margin-top: 3em;
+  overflow: auto; /* clearfix */
+}
+
+.left-column {
+  float: left;
+  width: 40%;
+}
+
+.right-column {
+  float: left;
+  width: 40%;
 }

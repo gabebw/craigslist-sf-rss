@@ -56,7 +56,7 @@ var UrlGenerator = function(originalUrl) {
     156: "tenderloin",
     157: "treasure island",
     164: "portola district"
-  }
+  };
 };
 
 UrlGenerator.prototype.generate = function(){
