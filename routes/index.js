@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 router.get('/results', function(req, res, next) {
   var url = req.query.url;
   var rssUrls = new UrlGenerator(url).generate();
-  res.render('results', { rssUrls: rssUrls });
+  res.render('results', { url: url, rssUrls: rssUrls });
 });
 
 router.get('/opml', function(req, res, next) {
@@ -18,7 +18,7 @@ router.get('/opml', function(req, res, next) {
 
   res.set('Content-Type', 'text/xml');
   res.set('Content-Disposition', 'attachment; filename="craigslist.opml"');
-  res.render('opml', { url: url, rssUrls: rssUrls });
+  res.render('opml', { rssUrls: rssUrls });
 });
 
 module.exports = router;
