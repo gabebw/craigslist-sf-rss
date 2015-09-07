@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Results
+
+  h2 With roommates
+  each url, neighborhoodName in rssUrls.roommates
+    p
+      a(href=url)= neighborhoodName
+
+  h2 Without roommates
+  each url, neighborhoodName in rssUrls.noRoommates
+    p
+      a(href=url)= neighborhoodName

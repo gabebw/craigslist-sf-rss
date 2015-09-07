@@ -1,5 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Craigslist RSS
+  p
+    b How does it work?
+  p
+    | Search on craigslist for your perfect apartment -- cats, max price, all
+    | that. Then paste your URL below. This app will generate a separate RSS feed
+    | for every single neighborhood in SF, both with and without roommates. Neat!
+  p
+    | This lets you look at SOMA separately from Noe Valley, if you're more
+    | interested in one than the other, without having to search 50 times just
+    | to get feeds for every neighborhood you're interested in.
+
+
+  form(action="/results")
+    input(type="text" name="url" size="100")
+    input(type="submit" value="Let's do it")
+    p
+      | Example URL: https://sfbay.craigslist.org/search/sfc/apa?hasPic=1&amp;max_price=2200&amp;min_price=500
