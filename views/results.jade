@@ -3,6 +3,24 @@ extends layout
 block content
   h1 Results
 
+  p
+    | You can download all of these feeds at once, nicely organized into folders
+    | for your RSS reader.
+
+  p
+    | Just click
+    | &#32;
+    a(href="/opml?url=#{url}") here
+    | &#32;
+    | then open the downloaded file with your RSS reader.
+
+  p Here are instructions on how to import OPML with a few common RSS readers:
+  ul
+    li
+      a(href="http://blog.feedly.com/2013/07/03/the-fix-to-the-missing-feeds-issue-is-here/") Feedly
+    li
+      a(href="http://netnewswireapp.com/mac/support/") NetNewsWire
+
   h2 With roommates
   each url, neighborhoodName in rssUrls.roommates
     p

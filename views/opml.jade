@@ -1,0 +1,24 @@
+doctype xml
+opml(version="1.1")
+  head
+    title Craigslist RSS Feeds for San Francisco
+  body
+    outline(text="Craigslist" title="Craigslist")
+      outline(text="No Roommates" title="No Roommates")
+        each url, neighborhoodName in rssUrls.noRoommates
+          outline(
+            text=neighborhoodName
+            title=neighborhoodName
+            type="rss"
+            version="RSS"
+            htmlUrl=url.replace("format=rss", "")
+            xmlUrl=url)
+      outline(text="Roommates" title="Roommates")
+        each url, neighborhoodName in rssUrls.roommates
+          outline(
+            text=neighborhoodName
+            title=neighborhoodName
+            type="rss"
+            version="RSS"
+            htmlUrl=url.replace("format=rss", "")
+            xmlUrl=url)
